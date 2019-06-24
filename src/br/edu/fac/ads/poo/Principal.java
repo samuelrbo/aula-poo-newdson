@@ -32,27 +32,23 @@ public class Principal {
 		// Eleitor
 		List<Eleitor> eleitores = new ArrayList<Eleitor>();
 		
-		/**
-		 * Passos:
-		 * 
-		 * 1. Entra com CPF e Nome do Eleitor
-		 * 2. Verifica se CPF já votou
-		 *    2.1. Se sim: Mostrar mensagem de erro e voltar para passo 1
-		 * 3. 1
-		 */
-		
 		Scanner input = new Scanner(System.in);
 		
 		boolean sair = false;
-		boolean jaVotou, confirmado;
-		int menuPrincipal;
-		String cpf, nomeEleitor;
+		boolean jaVotou;
+		boolean confirmado;
 		
-		Eleitor e;
-		Presidente p;
-		Senador s;
-		DeputadoFederal df;
-		DeputadoEstadual de;
+		int menuPrincipal;
+		int numPresidente;
+		int numSenador;
+		int numDepFederal;
+		int numDepEstadual;
+		
+		String cpf;
+		String nomeEleitor;
+		
+		Eleitor eleitor;
+		Voto voto;
 
 		while (!sair) {
 			jaVotou = false;
@@ -86,13 +82,37 @@ public class Principal {
 						System.out.println("Digite o nome do eleitor");
 						nomeEleitor = input.nextLine();
 						
-						e = new Eleitor(nomeEleitor, cpf);
+						eleitor = new Eleitor(nomeEleitor, cpf);
+						voto = new Voto();
 						
-						System.out.println("PRESIDENTES");
-						for (Presidente presidente : presidentes) {
-							System.out.println("  "+presidente.getNumero()+": "+presidente.getNome());
+						// PRESIDENTE
+						numPresidente = 0;
+						
+						while (!confirmado) {
+							System.out.println("PRESIDENTES");
+							for (Presidente presidente : presidentes) {
+								System.out.println("  "+presidente.getNumero()+": "+presidente.getNome());
+							}
+	
+							numPresidente = input.nextInt();
+							
+							System.out.println("Confirma?");
+							System.out.println("  0. Nao");
+							System.out.println("  1. Sim");
+							
+							confirmado = input.nextBoolean();
 						}
-
+						
+						for (Presidente presidente : presidentes) {
+							if (presidente.getNumero() == numPresidente) {
+								voto.setPresidente(presidente); 
+							}
+						}
+						
+						// reinicia valor da variável confirmado para capturaros demais votos
+						confirmado = false;
+						
+						// SENADOR
 						
 					}
 
