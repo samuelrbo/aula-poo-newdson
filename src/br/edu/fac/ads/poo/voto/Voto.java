@@ -1,4 +1,6 @@
-package br.edu.fac.ads.poo;
+package br.edu.fac.ads.poo.voto;
+
+import br.edu.fac.ads.poo.entidade.candidato.Candidato;
 
 public class Voto {
 

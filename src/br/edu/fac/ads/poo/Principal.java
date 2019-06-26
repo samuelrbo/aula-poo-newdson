@@ -4,6 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import br.edu.fac.ads.poo.entidade.candidato.Candidato;
+import br.edu.fac.ads.poo.entidade.candidato.DeputadoEstadual;
+import br.edu.fac.ads.poo.entidade.candidato.DeputadoFederal;
+import br.edu.fac.ads.poo.entidade.candidato.Presidente;
+import br.edu.fac.ads.poo.entidade.candidato.Senador;
+import br.edu.fac.ads.poo.entidade.eleitor.Eleitor;
+import br.edu.fac.ads.poo.tipo.TipoCandidato;
+import br.edu.fac.ads.poo.voto.Voto;
+
 public class Principal {
 	
 	private static Scanner input = new Scanner(System.in);

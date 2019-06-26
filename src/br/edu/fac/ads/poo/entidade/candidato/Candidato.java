@@ -1,4 +1,7 @@
-package br.edu.fac.ads.poo;
+package br.edu.fac.ads.poo.entidade.candidato;
+
+import br.edu.fac.ads.poo.interface_e_abastract.PessoaAbstract;
+import br.edu.fac.ads.poo.tipo.TipoPessoa;
 
 public class Candidato extends PessoaAbstract {
 	
@@ -27,6 +30,7 @@ public class Candidato extends PessoaAbstract {
 		return tipoCandidato;
 	}
 	
+	@Override
 	public String getTipo() {
 		return TipoPessoa.ELEITOR;
 	}

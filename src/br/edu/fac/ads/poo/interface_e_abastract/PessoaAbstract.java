@@ -1,4 +1,4 @@
-package br.edu.fac.ads.poo;
+package br.edu.fac.ads.poo.interface_e_abastract;
 
 /**
  * Classe abstrata

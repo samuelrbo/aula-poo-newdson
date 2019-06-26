@@ -1,4 +1,4 @@
-package br.edu.fac.ads.poo;
+package br.edu.fac.ads.poo.tipo;
 
 /**
  * Classe final para que não possa ser instânciada
