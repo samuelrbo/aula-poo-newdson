@@ -32,7 +32,7 @@ public class Candidato extends PessoaAbstract {
 	
 	@Override
 	public String getTipo() {
-		return TipoPessoa.ELEITOR;
+		return TipoPessoa.CANDIDATO;
 	}
 	
 	public void setTotalVotos(int totalVotos) {
