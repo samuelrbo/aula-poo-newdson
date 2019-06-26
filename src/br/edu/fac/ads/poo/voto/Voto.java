@@ -1,17 +1,21 @@
 package br.edu.fac.ads.poo.voto;
 
 import br.edu.fac.ads.poo.entidade.candidato.Candidato;
+import br.edu.fac.ads.poo.entidade.candidato.DeputadoEstadual;
+import br.edu.fac.ads.poo.entidade.candidato.DeputadoFederal;
+import br.edu.fac.ads.poo.entidade.candidato.Presidente;
+import br.edu.fac.ads.poo.entidade.candidato.Senador;
 
 public class Voto {
 
-	private Candidato presidente;
-	private Candidato senador;
-	private Candidato depFederal;
-	private Candidato depEstadual;
+	private Presidente presidente;
+	private Senador senador;
+	private DeputadoFederal depFederal;
+	private DeputadoEstadual depEstadual;
 	
 	public Voto() {}
 	
-	public void setPresidente(Candidato presidente) {
+	public void setPresidente(Presidente presidente) {
 		this.presidente = presidente;
 	}
 	
@@ -19,7 +23,7 @@ public class Voto {
 		return this.presidente;
 	}
 	
-	public void setSenador(Candidato senador) {
+	public void setSenador(Senador senador) {
 		this.senador = senador;
 	}
 	
@@ -27,7 +31,7 @@ public class Voto {
 		return this.senador;
 	}
 	
-	public void setDepFederal(Candidato depFederal) {
+	public void setDepFederal(DeputadoFederal depFederal) {
 		this.depFederal = depFederal;
 	}
 	
@@ -35,7 +39,7 @@ public class Voto {
 		return this.depFederal;
 	}
 	
-	public void setDepEstadual(Candidato depEstadual) {
+	public void setDepEstadual(DeputadoEstadual depEstadual) {
 		this.depEstadual = depEstadual;
 	}
 	
